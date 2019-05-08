@@ -12,9 +12,9 @@
  */
 template<typename T, typename... Args>
 void cleanup(T *t, Args&&... args){
-	//Cleanup the first item in the list
+	// Cleanup the first item in the list
 	cleanup(t);
-	//Recurse to clean up the remaining arguments
+	// Recurse to clean up the remaining arguments
 	cleanup(std::forward<Args>(args)...);
 }
 /*

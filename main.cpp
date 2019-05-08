@@ -8,8 +8,8 @@
 #include "include/cleanup.h"
 
 // Screen attributes
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 244 * 3;
+const int SCREEN_HEIGHT = 288 * 3;
 // Using Square Tiles 40x40
 const int TILE_SIZE = 40;
 
@@ -54,7 +54,7 @@ SDL_Texture* loadTexture(const std::string &file, SDL_Renderer *ren) {
 }
 
 /**
-* Loads a WAV file into a music pointer
+* Loads a WAV/OGG/AIFF file into a music pointer
 * @param file The WAV audio file to load
 * @return the loaded song, or nullptr if something went wrong.
 */
@@ -246,6 +246,9 @@ int main(int argc, char **argv) {
     SDL_QueryTexture(text, NULL, NULL, &tW, &tH);
     int tX = SCREEN_WIDTH / 2 - tW / 2;
     int tY = SCREEN_HEIGHT / 2 - tH / 2;
+
+    // Start Music
+    Mix_PlayMusic(song, -1);
 
     SDL_Event e;
     bool quit = false;
