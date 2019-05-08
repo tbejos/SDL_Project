@@ -194,7 +194,7 @@ int main(int argc, char **argv) {
 
     /* Load Fonts */
     const std::string fontPath = getResourcePath("font");
-    TTF_Font *font = TTF_OpenFont((fontPath + "sample.ttf").c_str(), 64);
+    TTF_Font *font = TTF_OpenFont((fontPath + "Inconsolata-LGC.ttf").c_str(), 48);
     if (font == nullptr) {
         cleanup(renderer, window);
         printError("TTF_OpenFont", TTF_GetError());

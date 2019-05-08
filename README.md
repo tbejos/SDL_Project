@@ -8,6 +8,6 @@ Playing around with game dev in C++
 
 **res/audio** - Where song's/sound effects are stored
 
-**res/font**  - Where the TTF is for text
+**res/font**  - Where the TTF font's are for text
 
 **res/img**   - Where my graphics are stored
